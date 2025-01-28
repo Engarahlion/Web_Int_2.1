@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/ps1xvg5g5jb8dvit?svg=true)](https://ci.appveyor.com/project/Engarahlion/web-int-2-1)
