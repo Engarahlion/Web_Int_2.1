@@ -1,6 +1,7 @@
 package ru.netology;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -108,8 +109,7 @@ public class CardOrderTest {
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79781231231");
         form.findElement(By.cssSelector("button.button")).click();
 
-        WebElement agreement = form.findElement(By.cssSelector("[data-test-id=agreement]"));
-        String agreementClass = agreement.getAttribute("class");
-        assertTrue(agreementClass.contains("input_invalid"));
+        WebElement agreement = driver.findElement(By.cssSelector(".input_invalid[data-test-id=agreement]"));
+        assertTrue(agreement.isDisplayed());
     }
 }
